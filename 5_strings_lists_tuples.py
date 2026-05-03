@@ -114,5 +114,157 @@ for value in marks:
 
 
 # ==========================================
+#      TUPLES, DICTIONARIES AND SETS
+# ==========================================
+
+
+# ---------- TUPLES ----------
+
+print("\n--- Tuples in Python ---")
+
+# Tuples are immutable
+# Created using ()
+
+tuple_data = (1, 2, 3, 4, "abc", 4, 4, 4)
+
+print("Tuple:", tuple_data)
+
+print("Length of tuple:", len(tuple_data))
+
+print("Element at index 2:", tuple_data[2])
+
+print("Index of value 1:", tuple_data.index(1))
+
+print("Count of 4:", tuple_data.count(4))
+
+
+# Single value tuple
+single_tuple = (1,)
+
+print("Single Value Tuple:", single_tuple)
+
+
+# ---------- DICTIONARIES ----------
+
+print("\n--- Dictionaries in Python ---")
+
+# Dictionaries are unordered key-value pairs
+
+info = {
+    "name": "priyansh",
+    "class": 8,
+    "subjects": ["maths", "science"],
+    3.14: "PI"
+}
+
+print("Dictionary:", info)
+
+# Access value using key
+print("Name:", info["name"])
+
+# Get all keys
+print("Keys:", info.keys())
+
+# Convert keys to list
+print("Keys as List:", list(info.keys()))
+
+# Get all values
+print("Values:", info.values())
+
+# Get key-value pairs
+print("Items:", info.items())
+
+# Safe access using get()
+print("Get Name:", info.get("name"))
+
+# Update dictionary
+info.update({
+    "city": "udaipur"
+})
+
+print("Updated Dictionary:", info)
+
+
+# ---------- SETS ----------
+
+print("\n--- Sets in Python ---")
+
+# Sets:
+# - Do not allow duplicate values
+# - Are unordered
+# - Elements should be immutable
+
+numbers = {1, 1, 2, 2, 33, 3, 3}
+
+print("Set:", numbers)
+
+print("Length of set:", len(numbers))
+
+print("Type:", type(numbers))
+
+# Empty set
+empty_set = set()
+
+print("Empty Set:", empty_set)
+
+# Add element
+numbers.add(5)
+
+print("After Adding 5:", numbers)
+
+# Remove element
+numbers.remove(5)
+
+print("After Removing 5:", numbers)
+
+# Remove random element
+numbers.pop()
+
+print("After Pop:", numbers)
+
+
+# ---------- UNION AND INTERSECTION ----------
+
+print("\n--- Union and Intersection ---")
+
+set_a = {1, 2, 3, 33}
+set_b = {5, 6, 7, 8, 33}
+
+print("Set A:", set_a)
+print("Set B:", set_b)
+
+print("Union:", set_a.union(set_b))
+
+print("Intersection:", set_a.intersection(set_b))
+
+
+# ---------- PRACTICE PROBLEM ----------
+
+print("\n--- Student Course Data ---")
+
+student_info = [
+    ("Alice", "Math"),
+    ("Bob", "Science"),
+    ("Alice", "Science"),
+    ("Charlie", "Math"),
+    ("Bob", "Math"),
+    ("Alice", "English"),
+    ("Charlie", "English"),
+]
+
+courses_set = set()
+
+for name, course in student_info:
+    print(name, "-", course)
+
+    courses_set.add(course)
+
+print("\nUnique Courses:")
+
+for course in courses_set:
+    print(course)
+
+
+# ==========================================
 #            END OF PROGRAM
 # ==========================================
